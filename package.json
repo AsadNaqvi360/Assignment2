@@ -1,0 +1,21 @@
+{
+  "name": "assignment-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "keywords": [],
+  "author": "Asad Naqvi",
+  "license": "ISC",
+  "description": "Student Portfolio",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
+  }
+}
