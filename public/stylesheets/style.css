@@ -1,0 +1,286 @@
+/* Ensure no extra margin or padding on body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    background-color: #f0f0f0; /* Light grey for clean look */
+    color: #333; /* Dark grey text for readability */
+    font-family: Arial, sans-serif;
+}
+
+html {
+    background-color: #e8e8e8; /* Slight grey */
+}
+
+/* Updated main styles */
+main {
+    flex: 1; /* Allow the main content to grow and take up available space */
+    padding: 60px 20px; /* Keep padding for main content */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box;
+    min-height: calc(100vh - 160px); /* Adjust for the height of header and footer */
+}
+
+/* Align the header to full width */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-image: url('/images/Forest.png'); /* Background image for header */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+}
+
+/* Updated Header Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: green; /* Green hover color */
+    transform: scale(1.1);
+}
+
+main h1 {
+    font-size: 3em;
+    color: #222;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #333; /* Set to match the header */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+    background-image: url('/images/Forest.png'); /* Background image for footer */
+    background-size: cover; /* Cover the entire footer */
+    background-position: center; /* Center the image */
+}
+
+/* Form and button styling */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: green; /* Action button color */
+    color: white;
+    border: none;
+}
+
+/* Call to Action button */
+.button {
+    background-color: green; /* Action button color */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: lightgreen; /* Lighter green on hover */
+    transform: scale(1.1);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* About Me section */
+section.about-me {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+section.about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+section.about-me p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Featured Projects section */
+section.featured {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #333;
+}
+
+section.featured h2 {
+    font-size: 2.5em;
+    color: #222;
+}
+
+.project-gallery .project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    max-width: 300px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Contact Me Page Styles */
+main {
+    padding: 60px 20px;
+    background-color: #f0f0f0; /* Background color for the main content */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the form */
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the form */
+}
+
+form label {
+    margin-top: 10px; /* Space above each label */
+    font-weight: bold; /* Bold labels */
+}
+
+form input, form textarea {
+    margin-top: 5px; /* Space above input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size for readability */
+    transition: border-color 0.3s; /* Transition for border color on focus */
+}
+
+form input:focus, form textarea:focus {
+    border-color: green; /* Change border color to green on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    margin-top: 20px; /* Space above buttons */
+    padding: 10px;
+    background-color: green; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: lightgreen; /* Light green on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    form {
+        width: 90%; /* Full width on small screens */
+    }
+}
+
+/* Fade in animation */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+body.loaded {
+    opacity: 1;
+}
+
+/* About Me specific styles */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.about-image {
+    max-width: 50%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.about-video {
+    max-width: 75%; /* Responsive video */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
