@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressLayouts = require('express-ejs-layouts');
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -17,13 +16,16 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.set('layout', 'layout'); // Sets 'layout.ejs' as the default layout
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
+// Static file setup
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules'))); // Serve node_modules for Font Awesome
+
+// Route setup
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
